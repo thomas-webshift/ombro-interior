@@ -1,0 +1,254 @@
+/*==========================================================================
+  Buttons
+=============================================================================*/
+@mixin btn-common {
+	display: inline-block;
+	cursor: pointer;
+	line-height: 1;
+	text-align: center;
+
+	font-weight: $btn-f-weight;
+	font-family: $btn-f-family;
+	text-transform: $btn-transform;
+	padding: $btn-padding;
+	border-radius: $btn-b-radius;
+	border-width: $btn-b-width;
+	border-style: $btn-b-style;
+	font-size: $btn-f-size;
+	@extend.anif;
+}
+
+/* Standard ===============================================*/
+
+@mixin btn($style: 'primary') {
+	@include btn-common;
+
+	@if $style == 'primary' {
+		@extend.text-white;
+		@extend.bg-primary;
+		@extend.border-primary;
+		@extend.op-btn;
+	}
+
+	@if $style == 'secondary' {
+		@extend.text-white;
+		@extend.bg-secondary;
+		@extend.border-secondary;
+		@extend.op-btn;
+	}
+
+	@if $style == 'tertiary' {
+		@extend.text-white;
+		@extend.bg-tertiary;
+		@extend.border-tertiary;
+		@extend.op-btn;
+	}
+
+	@if $style == 'black' {
+		@extend.text-white;
+		@extend.bg-black;
+		@extend.border-black;
+		@extend.op-btn;
+	}
+
+	@if $style == 'white' {
+		@extend.text-black;
+		@extend.bg-white;
+		@extend.border-white;
+		@extend.op-btn;
+	}
+
+	@if $style == 'ghost-primary' {
+		background-color: transparent;
+		@extend.text-primary;
+		@extend.border-primary;
+		&:hover {
+			@extend.text-white;
+			@extend.bg-primary;
+		}
+	}
+
+	@if $style == 'ghost-secondary' {
+		background-color: transparent;
+		@extend.text-secondary;
+		@extend.border-secondary;
+		&:hover {
+			@extend.text-white;
+			@extend.bg-secondary;
+		}
+	}
+
+	@if $style == 'ghost-tertiary' {
+		background-color: transparent;
+		@extend.text-tertiary;
+		@extend.border-tertiary;
+		&:hover {
+			@extend.text-white;
+			@extend.bg-tertiary;
+		}
+	}
+
+
+	@if $style == 'ghost-black' {
+		background-color: transparent;
+		@extend.text-black;
+		@extend.border-black;
+		&:hover {
+			@extend.text-white;
+			@extend.bg-black;
+		}
+	}
+
+	@if $style == 'ghost-white' {
+		background-color: transparent;
+		@extend.text-white;
+		@extend.border-white;
+		&:hover {
+			@extend.text-black;
+			@extend.bg-white;
+		}
+	}
+}
+
+.btn-primary,
+.btn-primary:visited {
+	@include btn('primary');
+}
+
+.btn-secondary,
+.btn-secondary:visited {
+	@include btn('secondary');
+}
+
+.btn-tertiary,
+.btn-tertiary:visited {
+	@include btn('tertiary');
+}
+
+.btn-black,
+.btn-black:visited {
+	@include btn('black');
+}
+
+.btn-white,
+.btn-white:visited {
+	@include btn('white');
+}
+
+/* Ghost ===============================================*/
+
+.btn-ghost-primary,
+.btn-ghost-primary:visited {
+	@include btn('ghost-primary');
+}
+
+.btn-ghost-secondary,
+.btn-ghost-secondary:visited {
+	@include btn('ghost-secondary');
+}
+
+.btn-ghost-tertiary,
+.btn-ghost-tertiary:visited {
+	@include btn('ghost-tertiary');
+}
+.btn-ghost-black,
+.btn-ghost-black:visited {
+	@include btn('ghost-black');
+}
+
+.btn-ghost-white,
+.btn-ghost-white:visited {
+	@include btn('ghost-white');
+}
+
+/* hamburger ==============================================*/
+
+.hamburger {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	.lijnen {
+		transform-origin: center;
+		position: relative;
+		width: 100%;
+		height: 3px;
+		display: block;
+		background-color: $black;
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: $black;
+		}
+		&:before {
+			top: -10px;
+		}
+		&:after {
+			bottom: -10px;
+		}
+	}
+	&.actief {
+		.lijnen {
+			transform: rotate(45deg);
+			&:before {
+				transform: rotate(90deg);
+				top: 0;
+			}
+			&:after {
+				transform: rotate(90deg);
+				bottom: 0;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Back to top
+============================================================================= */
+
+.backtotop {
+	right: 10px;
+	bottom: 10px;
+	opacity: 0;
+	@include z-index(top);
+	&.toon {
+		opacity: 1;
+	}
+}
+
+/* ==========================================================================
+	Social links
+============================================================================= */
+
+.social {
+	a {
+		i {
+			@extend .fab;
+			&.facebook:before {
+				content: fa-content($fa-var-facebook-f);
+			}
+			&.linkedin:before {
+				content: fa-content($fa-var-linkedin-in);
+			}
+			&.twitter:before {
+				content: fa-content($fa-var-twitter);
+			}
+			&.instagram:before {
+				content: fa-content($fa-var-instagram);
+			}
+			&.pinterest:before {
+				content: fa-content($fa-var-pinterest);
+			}
+			&.youtube:before {
+				content: fa-content($fa-var-youtube);
+			}
+			&.mail:before {
+				@extend .fas;
+				content: fa-content($fa-var-envelope);
+			}
+		}
+	}
+}

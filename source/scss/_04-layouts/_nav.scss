@@ -1,0 +1,250 @@
+/* nav-top ---------------------------------------*/
+
+.nav-top{
+		.menu{
+			>li{
+				display: inline-block;
+				>a{
+					color: $white;
+					font-weight: 600;
+					@extend.anif;
+				}
+				&:not(:first-of-type){
+					&::before{
+						content:"";
+						position: relative;
+						display: inline-block;
+						width: 1px;
+						height: 12px;
+						background: $white;
+						opacity: .7;
+						margin: 0 10px 0 10px;
+						vertical-align: -1px;
+					}
+				}
+				&.current-menu-item , &:hover{
+					> a{
+						opacity: .7;
+					}
+				}
+			}
+		}
+	&.nav-splash{
+		.hide-splash{
+			display: none!important;
+		}
+		.menu-topmenu-container{
+			.menu{
+				>li{
+					>a{
+						color: $gray-600;
+					}
+					&:not(:first-of-type){
+						&::before{
+							background: $gray-600;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* brandmenu ---------------------------------------*/
+
+.brandmenu{
+	.menu{
+		>li{
+			display: inline-block;
+			>a{
+				color: $gray-600;
+				font-weight: 600;
+				@extend.anif;
+				text-transform: uppercase;
+			}
+			&:not(:last-of-type){
+				&::after{
+					content:"";
+					position: relative;
+					display: inline-block;
+					width: 1px;
+					height: 12px;
+					background: $gray-600;
+					opacity: .7;
+					margin: 0 10px 0 10px;
+					vertical-align: -1px;
+				}
+			}
+			&.current-menu-item , &:hover{
+				> a{
+					color: $primary;
+				}
+			}
+		}
+	}
+}
+
+/*==========================================================================
+	nav-desktop
+=============================================================================*/
+
+.nav-desktop{
+	@include z-index(nav);
+	/* nav-desktop-logo ===================================================*/
+	.nav-desktop-logo img{
+		width: 120px;
+	}
+	/* nav-desktop-content ===================================================*/
+	.nav-desktop-content{
+		/* hoofdmenu ---------------------------------------*/
+		.hoofdmenu{
+			> div > ul{
+				>li{
+					display: inline-block;
+					&:not(:last-of-type){
+						margin-right: 20px;
+					}
+					>a{
+						padding: 20px 0;
+						color: $black;
+						font-weight: 800;
+						text-transform: uppercase;
+						@extend.anif;
+					}
+					&.current-menu-item , &:hover{
+						> a{
+							color: $primary;
+						}
+					}
+					&.btn-menu{
+						> a{
+							@extend.btn-primary;
+							padding: 8px 16px;
+						}
+					}
+					&.menu-item-has-children{
+						position: relative;
+						> a:after {
+							font-size: 14px;
+							margin-left: 6px;
+							@extend .far;
+							content:fa-content($fa-var-chevron-down);
+						}
+						/* submenu */
+						> .sub-menu{
+							box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.1);
+							overflow: hidden;
+							left: 0;
+							top: 40px;
+							position: absolute;
+							opacity: 0;
+							max-height: 0;
+							pointer-events: none;
+							transition: $trans;
+							width: 200px;
+							padding: 10px 0;
+							background-color: $gray-200;
+							> li {
+								> a{
+									font-size: 14px;
+									padding: 4px 20px;
+									display: block;
+									color: $black;
+								}
+								&.current-menu-item > a , &:hover > a{
+									color: $primary;
+								}
+							}
+						}
+						&:hover{
+							.sub-menu{
+								opacity: 1;
+								max-height: 700px;
+								pointer-events: auto;
+							}
+						}
+
+						&.mega{
+							/* submenu */
+							> .sub-menu{
+									width: auto;
+									min-width: 650px;
+									display: flex;
+									padding: 24px 24px;
+								> li {
+									margin: 0 12px;
+									flex: 1;
+									> a{
+										transition: $trans;
+										padding: 0;
+										text-transform: uppercase;
+										font-weight: bold;
+										padding-bottom: 12px;
+									}
+									> .sub-menu{
+										> li {
+											display: block;
+											&:not(:last-of-type){
+												margin-bottom: 4px;
+											}
+											> a{
+												transition: $trans;
+												color: $black;
+											}
+											&.current-menu-item > a , &:hover > a{
+												color: $primary;
+											}
+										}
+									}
+								}
+							}
+						}
+
+					}
+				}
+			}
+		}
+	}
+}
+
+/*==========================================================================
+	nav-mobile		
+=============================================================================*/
+
+.nav-mobile{
+	@include z-index(nav);
+	/* nav-mobile-logo ===================================================*/
+	.nav-mobile-logo img{
+		width: 80px;
+	}
+}
+
+/* nav-mobile-menu ===================================================*/
+.nav-mobile-menu{
+	&:not(.actief){display: none;}
+	top: 104px;
+	left: 0;
+	@include z-index(nav);
+	/* hoofdmenu ---------------------------------------*/
+	.hoofdmenu{
+		> div > ul{
+			>li{
+				display: block;
+				&:not(:last-of-type){
+					margin-bottom: 15px;
+				}
+				>a{
+					color: $black;
+				}
+				&.current-menu-item , &:hover{
+					> a{
+						color: $primary;
+					}
+				}
+				.sub-menu{
+					display: none;
+				}
+			}
+		}
+	}
+}

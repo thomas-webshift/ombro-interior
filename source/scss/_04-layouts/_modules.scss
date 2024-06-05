@@ -1,0 +1,82 @@
+/* googlemap ===================================================*/
+
+#googlemap {
+	width: 100%;
+	height: 500px;
+}
+
+#map-canvas {
+	width: 100%;
+	height: 500px;
+}
+
+.wpgmp_map_container{
+	border: none !important;
+	box-shadow: none !important;
+}
+
+/* accordion (bootstrap) ===================================================*/
+
+.accordion-item{
+	border: none!important;
+}
+
+.accordion-button{
+	align-items: flex-start!important;
+	background-color: transparent!important;
+	color: $black!important;
+	font-weight: 700;
+	box-shadow:none!important;
+	padding: 20px 0!important;
+	border-bottom: 1px solid $gray-400;
+	cursor: pointer;
+	&:focus{
+		border-bottom: 1px solid $gray-400;
+	}
+}
+
+.accordion-button::after{
+	@extend .far;
+	content:fa-content($fa-var-chevron-down);
+	background-image: none!important;
+	width: auto!important;
+}
+
+.accordion-body{
+	padding: 20px 0!important;
+	border-bottom: 1px solid $gray-400;
+}
+
+/* taalwissellaar ===================================================*/
+
+.taalwissellaar{
+	.wpml-ls-legacy-list-horizontal{padding: 0;}
+	ul{
+		margin: -4px!important;
+		li{
+			margin: 4px!important;
+			a{
+				background-color: $gray-200;
+				padding: 8px;
+				color: $gray-600;
+				transition: $trans;
+
+			}
+			&.wpml-ls-current-language,&:hover{
+				a{
+					color: $primary;
+				}
+			}
+		}
+	}
+}
+
+/* swiper ===================================================*/
+@include media-breakpoint-down(lg) {
+	.section-slider-hero{
+		.swiper-arrows{
+			right: 0!important;
+		}
+	}
+	
+}

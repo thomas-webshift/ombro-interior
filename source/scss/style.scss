@@ -1,0 +1,28 @@
+@charset 'UTF-8';
+
+// 1. Vendors
+
+@import '_01-vendors/_bootstrap/bootstrap';
+
+//@import '_01-vendors/_fontawesome/fontawesome-webfonts';
+@import '_01-vendors/_fontawesome/fontawesome';
+@import '_01-vendors/_fontawesome/solid';
+@import '_01-vendors/_fontawesome/regular';
+@import '_01-vendors/_fontawesome/light';
+@import '_01-vendors/_fontawesome/brands';
+
+@import '_01-vendors/swiper';
+@import '_01-vendors/jquery.fancybox';
+@import '_01-vendors/justifiedGallery';
+
+// 2. Base
+@import '_02-base/01-index';
+
+// 3. Components
+@import '_03-components/01-index';
+
+// 4. Layouts
+@import '_04-layouts/01-index';
+
+// 5. Pages
+@import '_05-pages/01-index';

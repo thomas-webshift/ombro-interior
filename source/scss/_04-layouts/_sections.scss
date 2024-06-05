@@ -1,0 +1,111 @@
+/*==========================================================================
+   scetion-slider-hero
+=============================================================================*/
+
+.section-slider-hero{
+   .swiper-slide{
+      height: 600px;
+   }
+}
+
+/*==========================================================================
+   section-cta-product
+=============================================================================*/
+
+.section-cta-product{
+   .container{
+      .row{
+         .col{
+            .text{
+               a{
+                  color: $primary;
+                  font-weight: 700;
+                  text-decoration: underline;
+               }
+            }
+         }
+      }
+   }
+}
+
+/*==========================================================================
+   heroe-home
+=============================================================================*/
+
+.heroe-home{
+   .container{
+      .row{
+         height: 70vh;
+         max-height: 800px;
+      }
+   }
+   .patch{
+      margin-right: 20px;
+   }
+   @include media-breakpoint-down(lg) {
+      display: flex;
+         flex-direction: column;
+      .container{
+         padding: 56px 0;
+         .row{
+            height: auto;
+            max-height: 800px;
+         }
+      }
+      .patch{
+         margin: 0 auto;
+         position: relative!important;
+      }
+   }
+}
+
+/*==========================================================================
+   section-over-home
+=============================================================================*/
+
+.section-over-home{
+   .container{
+      .row{
+         .col{
+            img{
+               width: 50vw;
+            }
+            @include media-breakpoint-down(lg) {
+               img{
+                  position: relative!important;
+                  width: 100%;
+               }
+            }
+         }
+      }
+   }
+}
+
+/*==========================================================================
+   section-brustor-home
+=============================================================================*/
+
+.section-brustor-home{
+   .container{
+      .row{
+         .col{
+            .img-wrap{
+               margin-top: -150px;
+               @include media-breakpoint-down(lg) {
+                  margin-top: 0;
+               }
+            }
+         }
+      }
+   }
+}
+
+/*==========================================================================
+   section-nieuws-one
+=============================================================================*/
+
+.section-nieuws-one{
+   @include media-breakpoint-down(lg) {
+      margin-top: 56px!important;
+   }
+}

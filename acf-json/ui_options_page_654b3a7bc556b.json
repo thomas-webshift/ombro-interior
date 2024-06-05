@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_654b3a7bc556b",
+    "title": "Info & Gegevens",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Info & Gegevens",
+    "menu_slug": "gegevens",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "dashicons-id-alt",
+    "menu_title": "",
+    "position": "",
+    "redirect": 0,
+    "description": "",
+    "update_button": "Bijwerken",
+    "updated_message": "Gegevens bijgewerkt",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1707382340
+}

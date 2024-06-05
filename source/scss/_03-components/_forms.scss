@@ -1,0 +1,432 @@
+/* ==========================================================================
+	Base
+============================================================================= */
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='tel'],
+input[type='number'],
+input[type='date'],
+select,
+textarea {
+	width: 100%;
+	display: block;
+	padding: 8px 8px;
+	font-size: 14px;
+	height: 46px;
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 0px;
+	outline: none;
+	color: $black;
+	background-color: $gray-200;
+	border-color: $black;
+	outline: none;
+	appearance: none;
+}
+
+select {
+	appearance: none;
+}
+
+textarea {
+	width: 100% !important;
+	height: 200px;
+	min-height: 100px;
+}
+
+/* button / submit ---------------------------------------*/
+
+input.button {
+	@include btn('primary');
+	outline: none;
+	appearance: none;
+}
+
+/* Placeholders ---------------------------------------*/
+
+::-webkit-input-placeholder {
+	color: $gray-600;
+}
+:-ms-input-placeholder {
+	color: $gray-600;
+}
+
+input:hover::-webkit-input-placeholder,
+textarea:hover::-webkit-input-placeholder {
+	opacity: 0.4;
+}
+input:hover:-ms-input-placeholder,
+textarea:hover:-ms-input-placeholder {
+	opacity: 0.4;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+	color: transparent;
+}
+
+/* ==========================================================================
+	Gravity forms
+============================================================================= */
+
+.gform_wrapper {
+	.gform_heading{display: none;}
+
+	.gf_progressbar_title{
+		margin-bottom: 16px;
+		font-size: $t-regular;
+		font-weight: 700;
+	}
+
+	.gf_progressbar{
+		background-color: $gray-200;
+		margin-bottom: 24px;
+		.gf_progressbar_percentage{
+			background-color: $primary;
+			padding: 8px;
+			color: $white;
+		}
+	}
+
+	form {
+		position: relative;
+		max-width: 100%;
+
+		.gfield_label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+
+		.gfield.gform_hidden {
+			padding: 0!important;
+			margin: 0!important;
+		}
+
+		.gfield {
+			&:not(.gfield_contains_required) {
+				> .gfield_label {
+					display: inline-block;
+				}
+				> .gfield_description {
+					display: inline-block;
+					margin-left: 8px;
+					font-size: 10px;
+					vertical-align: 1px;
+				}
+			}
+		}
+
+		.gfield.gform_validation_container,
+		.hidden_label > legend,.hidden_label > label,
+		.gfield_label .gfield_required {
+			display: none;
+		}
+
+		/* footer en spinner ---------------------------------------*/
+
+		.gform_page_footer, .gform_footer {
+			margin-top: 24px;
+			display: flex;
+			align-items: center;
+			.gform_previous_button{
+				margin-right: 8px;
+			}
+		}
+
+		.gform_ajax_spinner {
+			margin-left: 8px;
+		}
+
+		/* select ---------------------------------------*/
+
+		.ginput_container_select {
+			position: relative;
+			&:after {
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				transform: translate(0, -50%);
+				font-size: 14px;
+				margin-left: 6px;
+				@extend .far;
+				content: fa-content($fa-var-chevron-down);
+			}
+		}
+
+		/* Checkboxes & Radios ---------------------------------------*/
+		.ginput_container_checkbox,
+		.ginput_container_radio,
+		.ginput_container_consent {
+			label {
+				position: relative;
+				padding: 0 0 0 $check-pd;
+				font-size: $check-f-size;
+				font-weight: $check-f-weight;
+				cursor: pointer;
+				display: inline-block;
+				/* binnenste */
+				&:before {
+					content: '';
+					position: absolute;
+					top: $check-pos-top;
+					left: 0px;
+					z-index: 9;
+					opacity: 0;
+					background-color: $check-bc-inn;
+					width: 13px;
+					height: 13px;
+					transform: scale(0.4);
+				}
+				/* buitenste */
+				&:after {
+					content: '';
+					position: absolute;
+					top: $check-pos-top;
+					left: 0;
+					background-color: $check-bc-out;
+					border: solid 2px $check-b-bc-out;
+					height: 13px;
+					width: 13px;
+				}
+			}
+			input {
+				display: none;
+				&:checked + label {
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+			> div{
+				> div{
+					&:not(:last-of-type){
+						margin-bottom: $check-spacing;
+					}
+				}
+			}
+		}
+
+		.ginput_container_checkbox,
+		.ginput_container_radio {
+			> div {
+				&:not(:last-of-type) {
+					margin-bottom: 5px;
+				}
+			}
+		}
+
+		/* consent */
+		.ginput_container_consent {
+			label {
+				padding: 0 0 0 $check-pd;
+				font-size: $legal-f-size;
+				font-weight: $legal-f-weight;
+				a {
+					text-decoration: underline;
+					color: $legal-f-a-c;
+					&:hover {
+						opacity: 0.8;
+					}
+				}
+				/* binnenste */
+				&:before {
+					top: $legal-pos-top;
+				}
+				/* buitenste */
+				&:after {
+					top: $legal-pos-top;
+				}
+			}
+			.gfield_required {
+				display: none;
+			}
+		}
+
+		/* radio */
+		.gfield_radio > div {
+			label:after,
+			input[type='radio']:checked + label:before {
+				border-radius: 50%;
+			}
+		}
+
+		/* checkbox */
+		.gfield_checkbox > div {
+			label{
+				&:before{ border-radius: $check-br-inn; }
+				&:after{ border-radius: $check-br-out; }
+			}
+		}
+
+		/* form framework ===============================================*/
+
+		$formgutter: 8px;
+
+		.gform_fields {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			margin: -$formgutter;
+			> .gfield {
+				width: calc(100% - 16px);
+				margin: $formgutter;
+				border: none;
+				padding: 0;
+			}
+			> .gfield.col-1 {width: calc(8.333% - 16px);}
+			> .gfield.col-2 {width: calc(16.666% - 16px);}
+			> .gfield.col-3 {width: calc(24.999% - 16px);}
+			> .gfield.col-4 {width: calc(33.333% - 16px);}
+			> .gfield.col-5 {width: calc(41.666% - 16px);}
+			> .gfield.col-6 {width: calc(49.999% - 16px);}
+			> .gfield.col-7 {width: calc(58.333% - 16px);}
+			> .gfield.col-8 {width: calc(66.666% - 16px);}
+			> .gfield.col-9 {width: calc(74.999% - 16px);}
+			> .gfield.col-10 {width: calc(83.333% - 16px);}
+			> .gfield.col-11 {width: calc(91.666% - 16px);}
+			> .gfield.col-12 {width: calc(100% - 16px);}
+
+		}
+
+		@include media-breakpoint-down(sm) {
+			.gform_fields > .gfield {
+				width: calc(100% - 16px) !important;
+			}
+		}
+	}
+}
+
+/* succes ---------------------------------------*/
+
+.gform_confirmation_message {
+	font-size: 14px;
+	padding: 14px 20px;
+	color: $white;
+	background-color: $success;
+	a{
+		color: $white;
+		text-decoration: underline;
+	}
+}
+
+/* error ---------------------------------------*/
+
+.gform_validation_errors {
+	padding: 14px 20px;
+	margin-bottom: 15px;
+	background-color: $error;
+	border-radius: $mes-b-radius;
+	.validation_error {
+		font-size: $mes-f-size;
+		font-weight: $mes-f-weight;
+		color: $white;
+	}
+}
+
+.gfield_error {
+	input,
+	select,
+	textarea {
+		border-bottom: 2px solid $error;
+	}
+}
+
+.gfield_description.validation_message {
+	font-size: $req-f-size;
+	font-weight: $req-f-weight;
+	margin-top: $req-pos-top;
+	color: $error;
+}
+
+/*==========================================================================
+	searchandfilter
+=============================================================================*/
+
+.searchandfilter{
+	> ul{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		>li{
+			padding: 0;
+			h4{
+				color: $primary;
+			}
+			&:not(:last-of-type){
+				margin-right: 32px;
+			}
+			select,input{
+				padding: 8px 40px 8px 16px;
+				background-color: $gray-200;
+				&.sf-input-select{
+					min-width: 300px;
+				}
+			}
+			&[data-sf-field-input-type="select"]{
+				position: relative;
+				&:after {
+					position: absolute;
+					font-size: 14px;
+					margin-left: 6px;
+					bottom: 17px;
+    				right: 14px;
+					color: $black;
+					@extend .far;
+					content:fa-content($fa-var-chevron-down);
+				}
+			}
+			&[data-sf-field-type="search"]{
+				position: relative;
+				&:after {
+					position: absolute;
+					font-size: 14px;
+					margin-left: 6px;
+					top: 17px;
+    				right: 14px;
+					color: $black;
+					@extend .far;
+					content:fa-content($fa-var-magnifying-glass);
+				}
+				.post-type-archive-customer &{
+					input{
+						min-width: 300px;
+					}
+				}
+			}
+			&[data-sf-field-input-type="radio"]{
+				ul{
+					display: flex;
+					li{
+						margin: 8px;
+						input{
+							display: none;
+						}
+						label{
+							padding: 8px 16px 8px;
+							border-radius: 8px;
+							transition: $trans;
+							background-color: $gray-200;
+							cursor: pointer;
+						}
+						&.sf-option-active, &:hover{
+							label{
+								color: $primary;
+							}
+						}
+					}
+				}
+			}
+		}
+		.search-filter-reset{
+			@extend.t-medium;
+		}
+	}
+}

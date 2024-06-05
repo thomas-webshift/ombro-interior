@@ -1,0 +1,183 @@
+/*==========================================================================
+  Base
+=============================================================================*/
+
+// Spacings
+
+$max-container:      1140px;
+$paragraph-spacing:  20px;
+$grid-gutter-width:  32px;
+
+/*==========================================================================
+  Typography
+=============================================================================*/
+
+// Familly
+
+$font: 'Montserrat', sans-serif;
+$font-sec: 'Montserrat', sans-serif;
+
+// Headings
+
+ $heading-1: 40px;/* h-1 */   $heading-m-1: 32px;
+ $heading-2: 32px;/* h-2 */   $heading-m-2: 24px;
+ $heading-3: 24px;/* h-3 */   $heading-m-3: 20px;
+ $heading-4: 20px;/* h-4 */   $heading-m-4: 18px;
+ $heading-5: 18px;/* h-5 */   $heading-m-5: 16px;
+ $heading-6: 18px;/* h-6 */   $heading-m-6: 16px;
+
+$lh-heading-1: 120%;
+$lh-heading-2: 120%;
+$lh-heading-3: 130%;
+$lh-heading-4: 130%;
+$lh-heading-5: 140%;
+$lh-heading-6: 150%;
+
+// Texts
+
+$t-large:   20px;     $t-m-large: 20px;
+$t-medium:  18px;    $t-m-medium: 18px;
+$t-regular: 16px;   $t-m-regular: 16px;
+$t-small:   14px;     $t-m-small: 14px;
+$t-tiny:    12px;      $t-m-tiny: 12px;
+
+$lh-t-large:   140%;
+$lh-t-medium:  140%;
+$lh-t-regular: 150%;
+$lh-t-small:   160%;
+$lh-t-tiny:   160%;
+
+// Base
+
+$body-font-size: $t-small;
+$body-line-height: $lh-t-small;
+
+/*==========================================================================
+  Buttons
+=============================================================================*/
+
+$btn-f-size:    $t-regular;
+$btn-f-weight:  700;
+$btn-f-family:  $font;
+$btn-transform: uppercase;
+$btn-b-radius:  0px;
+$btn-b-width:   2px;
+$btn-b-style:   solid;
+$btn-padding:   15px 30px;
+
+/*==========================================================================
+  colors (Bootstrap overrides)
+=============================================================================*/
+
+// Color brand
+
+$primary:       #1BA6DF;
+$secondary:     #FA6161;
+$tertiary:      #3fb247;
+
+// Color system
+
+$success:       #027A48;
+$info:          #F6F2D2;
+$warning:       #cf8600;
+$error:         #B42318;
+
+// Color Neutral
+
+$white:         #fff;
+$gray-100:      #f8f9fa;
+$gray-200:      #e9ecef;
+$gray-300:      #dee2e6;
+$gray-400:      #ced4da;
+$gray-500:      #adb5bd;
+$gray-600:      #6c757d;
+$gray-700:      #495057;
+$gray-800:      #343a40;
+$gray-900:      #212529;
+$black:         #191B1D;
+
+// Base colors
+
+$c-font:         $black;
+$c-heading:      $black;
+$c-link:         $primary;
+
+/*==========================================================================
+  Forms
+=============================================================================*/
+
+// Input
+
+$form-f-size:    $t-regular;
+$form-f-weight:  600;
+$form-f-family:  $font;
+$form-transform: none;
+$form-f-c:       $black;
+$form-bg-c:      $gray-200;
+$form-b-c:       $black;
+$form-b-radius:  0px;
+$form-b-width:   0px;
+$form-b-style:   solid;
+$form-padding:   8px 8px;
+$form-height:    46px;
+
+// textarea
+
+$textareau-h:    200px;
+$textareau-mh:   100px;
+
+// label
+
+$form-label-mb:  5px; 
+$form-label-fw:  600; 
+
+// checkbox/radio
+
+$check-spacing:  5px; // space between items
+$check-pd:       20px; // space between label
+$check-f-size:   $t-regular;
+$check-f-weight: 400;
+$check-pos-top:  3px;
+$legal-f-size:   $t-tiny;
+$legal-f-a-c:    $c-font;
+$legal-f-weight: 400;
+$legal-pos-top:  3px;
+$check-br-out:   0px; // border-radius
+$check-bc-out:   $white;
+$check-b-bc-out: $gray-400;
+$check-br-inn:   0px; // border-radius
+$check-bc-inn:   $primary;
+
+// messages
+
+$req-f-size:    $t-small;
+$req-f-weight:  500;
+$req-pos-top:   5px;
+$mes-f-size:    $t-small;
+$mes-f-weight:  600;
+$mes-b-radius:  0px;
+
+/*==========================================================================
+  Spacing (Bootstrap overrides)
+=============================================================================*/
+
+$spacershift: 8px;
+$spacers: (
+  0: 0,
+  4: $spacershift / 2,
+  8: $spacershift,
+  16: $spacershift * 2,
+  24: $spacershift * 3,
+  32: $spacershift * 4,
+  40: $spacershift * 5,
+  48: $spacershift * 6,
+  56: $spacershift * 7,
+  64: $spacershift * 8,
+  72: $spacershift * 9,
+  80: $spacershift * 10,
+  88: $spacershift * 11,
+  96: $spacershift * 12,
+  104: $spacershift * 13,
+  112: $spacershift * 14,
+  120: $spacershift * 15,
+);

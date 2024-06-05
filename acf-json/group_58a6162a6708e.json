@@ -1,0 +1,57 @@
+{
+    "key": "group_58a6162a6708e",
+    "title": "- CPT - Nieuws",
+    "fields": [
+        {
+            "key": "field_65df3813613c3",
+            "label": "Uitgelichte tekst",
+            "name": "uitgelichte_tekst",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Vul dit enkel uit als je de status van dit bericht op uitgelicht zet.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "nieuws"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1709127744
+}

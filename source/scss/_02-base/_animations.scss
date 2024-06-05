@@ -1,0 +1,67 @@
+/*==========================================================================
+  Basis
+=============================================================================*/
+
+$trans: .2s ease-in-out;
+$trans-smooth: .5s cubic-bezier(.06,.48,.83,.79);
+$trans-anim: 1.5s cubic-bezier(0.08,0.82,0.17,1);
+
+/* ==========================================================================
+	Custom animations
+============================================================================= */	
+
+/* growing-line */
+
+.growing-line{
+  position: relative;
+  display: inline-block;
+  &:after {
+    display:block;
+    content: '';
+    border-bottom: solid 2px #000;  
+    transform: scaleX(0); 
+    opacity: 0.2; 
+    transition: $trans-smooth;
+  }
+  &:hover:after { transform: scaleX(1); opacity: 1; }
+  &.re:after{ transform-origin: 100% 50%; }
+  &.li:after{  transform-origin: 0% 50%; }
+}
+
+/* animation helper classes */
+
+.anif{transition:$trans;}
+.anif.op:hover{opacity: .8;}
+.anif.op-btn:hover{opacity: .9;}
+.anif.right:hover{transform: translate3d(5px,0,0);}
+.anif.left:hover{transform: translate3d(-5px,0,0);}
+.anif.down:hover{transform: translate3d(0,5px,0);}
+.anif.up:hover{transform: translate3d(0,-5px,0);}
+.anif.zo:hover{ transform: scale(1.05);}
+
+.ani{transition:$trans-smooth;}
+.ani.op:hover{opacity: .7;}
+.ani.right:hover{transform: translate3d(5px,0,0);}
+.ani.left:hover{transform: translate3d(-5px,0,0);}
+.ani.down:hover{transform: translate3d(0,5px,0);}
+.ani.up:hover{transform: translate3d(0,-5px,0);}
+.ani.zo:hover{ transform: scale(1.05);}
+
+.anim{transition:$trans-anim; opacity: 0;}
+.anim.right{transform: translate3d(-100px,0,0);}
+.anim.left{transform: translate3d(100px,0,0);}
+.anim.down{transform: translate3d(0,-100px,0);}
+.anim.up{transform: translate3d(0,100px,0);}
+.anim.zo{ transform: scale(1.05);}
+.anim.anim-start{transform: translate3d(0,0,0); opacity: 1;}
+
+
+.td-1{transition-delay: .1s;}
+.td-2{transition-delay: .2s;}
+.td-3{transition-delay: .3s;}
+.td-4{transition-delay: .4s;}
+.td-5{transition-delay: .5s;}
+.td-6{transition-delay: .6s;}
+.td-7{transition-delay: .7s;}
+.td-8{transition-delay: .8s;}
+.td-9{transition-delay: .9s;}

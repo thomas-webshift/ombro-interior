@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Wrappers, sections en containers
+============================================================================= */
+
+.container {
+	padding: 0;
+	max-width: $max-container;
+	width: 90%;
+	&-wide{
+		padding: 0;
+		max-width: 1250px;
+		margin: 0 auto;
+		width: 90%;
+	}
+	&-board{
+		padding: 0;
+		max-width: 90%;
+		margin: 0 auto;
+		width: 90%;
+	}
+}
+
+section{ 
+	margin: 112px 0; 
+	@include media-breakpoint-down(lg) {
+		margin: 56px 0;
+	}
+}
+
+/*==========================================================================
+	Typography
+=============================================================================*/
+
+body{ 
+	font-family: $font; 
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	color: $c-font;
+}
+
+h1,h2{
+	font-family: $font;
+	color: $c-heading;
+}
+
+p:not(:last-of-type){margin-bottom: $paragraph-spacing;}
+
+::selection {
+  color: $primary;
+  background-color: $gray-100;
+}

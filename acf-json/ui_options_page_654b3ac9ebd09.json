@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_654b3ac9ebd09",
+    "title": "Thema",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Thema",
+    "menu_slug": "thema-instellingen",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "dashicons-art",
+    "menu_title": "",
+    "position": "",
+    "redirect": 0,
+    "description": "",
+    "update_button": "Bijwerken",
+    "updated_message": "Opties bijgewerkt",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1707382340
+}

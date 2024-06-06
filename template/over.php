@@ -8,7 +8,6 @@
 
 <?php get_template_part('template-parts/sections/section-slider-hero'); ?>
 <?php get_template_part('template-parts/sections/section-over'); ?>
-<?php get_template_part('template-parts/sections/section-virtueel'); ?>
 <?php get_template_part('template-parts/sections/section-cta-global'); ?>
 
 <!-- EINDE INHOUD ////////////////// -->

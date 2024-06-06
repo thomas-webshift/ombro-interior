@@ -9,6 +9,11 @@
 $terms = get_field('producten');
 
 if ($terms) {
+    // Sort the terms by menu_order
+    usort($terms, function($a, $b) {
+        return $a->menu_order - $b->menu_order;
+    });
+
     foreach ($terms as $term) {
         // Get the term ID
         $term_id = $term->term_id;
@@ -23,7 +28,7 @@ if ($terms) {
 
         // Display the content
         ?>
-        <div class="col col-lg-4">
+        <div class="col col-lg-6">
             <a href="<?php echo esc_url($term_link); ?>" class="taxonomy-term-link">
                 <div class="card-uitgelicht ani op up">
                     <?php if ($image) { ?>
@@ -40,6 +45,8 @@ if ($terms) {
     }
 }
 ?>
+
+
 
 
       </div>

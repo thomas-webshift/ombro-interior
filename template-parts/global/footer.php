@@ -17,11 +17,6 @@ $company = [
 			</div>
 			<div class="col">
 				<nav class="footermenu">
-					<?php wp_nav_menu( array( 'theme_location' => 'footermenu_1' ) ); ?>
-				</nav>
-			</div>
-			<div class="col">
-				<nav class="footermenu">
 					<?php wp_nav_menu( array( 'theme_location' => 'footermenu_2' ) ); ?>
 				</nav>
 			</div>

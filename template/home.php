@@ -12,7 +12,6 @@
 <?php get_template_part('template-parts/sections/section-brustor-home'); ?>
 <?php get_template_part('template-parts/sections/section-brochure'); ?>
 <?php get_template_part('template-parts/sections/section-nieuws-laatste'); ?>
-<?php get_template_part('template-parts/sections/section-virtueel'); ?>
 <?php get_template_part('template-parts/sections/section-map'); ?>
 <?php get_template_part('template-parts/sections/section-cta-global'); ?>
 

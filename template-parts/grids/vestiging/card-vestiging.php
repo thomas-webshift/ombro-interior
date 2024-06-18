@@ -17,10 +17,14 @@
       ]; ?>
     </div>
     <a target="_blank" class="route text-primary mt-8 border-1 border-bottom d-inline-block anif op" href="<?php echo $vest_data['route'] ?>"><i class="fa fa-map me-4" aria-hidden="true"></i><?php _e( 'Plan je route', 'theme' ); ?></a>
+    <?php if ( $vest_data['email'] ) : ?>
     <div class="d-flex flex-column align-items-start gap-8 mt-8">
       <?php echo '<a class="item tel text-primary border-1 border-bottom d-inline-block anif op" href="' . strip_tel( $vest_data['telefoon'] ) . '"><i class="me-4 fa fa-phone" aria-hidden="true"></i>' . $vest_data['telefoon'] . '</a>'; ?>
       <a class="item mail text-primary border-1 border-bottom d-inline-block anif op text-lowercase" href="mailto:<?php echo $vest_data['email'] ?>"><i class="fa fa-envelope me-4" aria-hidden="true"></i><?php echo $vest_data['email'] ?></a>
     </div>
     <a href="<?php echo get_permalink($post->ID);?>" class="fw-700 text-uppercase text-black mt-16 d-inline-block ani op" ><?php _e( 'Openingsuren', 'theme' ); ?><i class="fa fa-arrow-right ms-8" aria-hidden="true"></i></a>
+    <?php endif; ?>
     </div>
+      
+    
 </div>

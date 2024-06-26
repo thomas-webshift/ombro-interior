@@ -75,7 +75,22 @@
 					vertical-align: -1px;
 				}
 			}
-			&.current-menu-item , &:hover{
+			&.ombro:hover{
+				> a{
+					color: #1BA6DF;
+				}
+			}
+			&.interior:hover{
+				> a{
+					color: #F37021;
+				}
+			}
+			&.special:hover{
+				> a{
+					color: #000;
+				}
+			}
+			&.current-menu-item{
 				> a{
 					color: $primary;
 				}
@@ -231,10 +246,11 @@
 			>li{
 				display: block;
 				&:not(:last-of-type){
-					margin-bottom: 15px;
+					margin-bottom: 24px;
 				}
 				>a{
 					color: $black;
+					font-size: 18px;
 				}
 				&.current-menu-item , &:hover{
 					> a{

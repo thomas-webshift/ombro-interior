@@ -10,6 +10,7 @@
 <?php get_template_part('template-parts/sections/section-producten-uitgelicht'); ?>
 <?php get_template_part('template-parts/sections/section-over-home'); ?>
 <?php get_template_part('template-parts/sections/section-brustor-home'); ?>
+<?php get_template_part('template-parts/sections/section-brands'); ?>
 <?php get_template_part('template-parts/sections/section-brochure'); ?>
 <?php get_template_part('template-parts/sections/section-nieuws-laatste'); ?>
 <?php get_template_part('template-parts/sections/section-map'); ?>

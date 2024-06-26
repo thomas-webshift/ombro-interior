@@ -7,7 +7,7 @@
       "uuidString" : "C57A02C9-6E56-42D7-B91B-4A1DDD126F19"
     }
   ],
-  "creatorBuild" : "34564",
+  "creatorBuild" : "34576",
   "files" : {
     "\/.vscode\/sftp.json" : {
       "ft" : 524288,
@@ -311,6 +311,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/archive-product.php",
+      "oF" : 0
+    },
+    "\/archive-realisatie.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/archive-realisatie.php",
       "oF" : 0
     },
     "\/archive-vestiging.php" : {
@@ -801,6 +809,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/single-product.php",
+      "oF" : 0
+    },
+    "\/single-realisatie.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/single-realisatie.php",
       "oF" : 0
     },
     "\/single-vestiging.php" : {
@@ -3526,6 +3542,30 @@
       "oAP" : "\/template-parts\/grids\/product\/grid-product.php",
       "oF" : 0
     },
+    "\/template-parts\/grids\/realisatie\/card-realisatie.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/grids\/realisatie\/card-realisatie.php",
+      "oF" : 0
+    },
+    "\/template-parts\/grids\/realisatie\/grid-realisatie-laatste.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/grids\/realisatie\/grid-realisatie-laatste.php",
+      "oF" : 0
+    },
+    "\/template-parts\/grids\/realisatie\/grid-realisatie.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/grids\/realisatie\/grid-realisatie.php",
+      "oF" : 0
+    },
     "\/template-parts\/grids\/search\/card-search.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -3654,6 +3694,14 @@
       "oAP" : "\/template-parts\/sections\/section-acties-offerte.php",
       "oF" : 0
     },
+    "\/template-parts\/sections\/section-brands.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/sections\/section-brands.php",
+      "oF" : 0
+    },
     "\/template-parts\/sections\/section-brochure.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -3684,6 +3732,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/template-parts\/sections\/section-cta-global.php",
+      "oF" : 0
+    },
+    "\/template-parts\/sections\/section-cta-rea.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/sections\/section-cta-rea.php",
       "oF" : 0
     },
     "\/template-parts\/sections\/section-map.php" : {
@@ -3748,6 +3804,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/template-parts\/sections\/section-producten-uitgelicht.php",
+      "oF" : 0
+    },
+    "\/template-parts\/sections\/section-realisatie-andere.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/sections\/section-realisatie-andere.php",
       "oF" : 0
     },
     "\/template-parts\/sections\/section-slider-hero.php" : {

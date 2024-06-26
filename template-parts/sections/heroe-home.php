@@ -33,7 +33,10 @@
          </div>	
       </div>
    </div>
-   <img width="200" src="<?php echo esc_url($data['patch']['url']); ?>" alt="<?php echo $data['patch']['alt']; ?>" class="media position-absolute bottom-0 end-0 patch mb-96 mb-lg-24">
+   <div class="vstack gap-4 position-absolute bottom-0 end-0 patch mb-96 mb-lg-24">
+      <span class="text-white fw-700"><?php _e( 'Officiële partner', 'theme' ); ?></span>
+      <img width="124" src="<?php echo esc_url($data['patch']['url']); ?>" alt="<?php echo $data['patch']['alt']; ?>" class="media">
+   </div>
       <div class="swiper-arrows d-flex align-items-center gap-0 position-absolute bottom-0 start-50 translate-middle-x">
          <div class="home-prev bg-black p-24 px-32"><i class="fal text-white h-3 fa-chevron-left"></i></div>
          <div class="home-next bg-black p-24 px-32"><i class="fal text-white h-3 fa-chevron-right"></i></div>

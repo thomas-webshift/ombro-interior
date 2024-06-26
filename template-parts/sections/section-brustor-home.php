@@ -16,8 +16,8 @@
 			</div>
 			<div class="col col-lg-6 position-relative">
 				<div class="img-wrap position-relative">
-					<div class="logo-wrap bg-gray-900 p-8 px-16 position-absolute start-0 bottom-0">
-						<img width="100" src="<?php echo esc_url($data['logo']['url']); ?>" alt="<?php echo $data['logo']['alt']; ?>" class="media h-100 object-fit-cover"></img>
+					<div class="logo-wrap bg-gray-900 p-16 position-absolute start-0 bottom-0">
+						<img width="70" src="<?php echo esc_url($data['logo']['url']); ?>" alt="<?php echo $data['logo']['alt']; ?>" class="media h-100 object-fit-cover"></img>
 					</div>
                <img src="<?php echo esc_url($data['foto']['url']); ?>" alt="<?php echo $data['foto']['alt']; ?>" class="media mw-100"></img>
             </div>

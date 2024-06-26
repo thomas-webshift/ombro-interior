@@ -34,7 +34,7 @@
             <div class="acf-justigal">
                <?php if ( $gallery_images ) :  ?>
                   <?php foreach ( $gallery_images as $gallery_image ): ?>
-                     <a href="<?php echo $gallery_image['url']; ?>" data-fancybox="gallery">
+                     <a class="anif op" href="<?php echo $gallery_image['url']; ?>" data-fancybox="gallery">
                         <img src="<?php echo $gallery_image['sizes']['large']; ?>" alt="<?php echo $gallery_image['alt']; ?>" />
                      </a>
                   <?php endforeach; ?>

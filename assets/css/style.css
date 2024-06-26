@@ -26862,7 +26862,13 @@ footer nav > div > ul li {
     opacity: .7;
     margin: 0 10px 0 10px;
     vertical-align: -1px; }
-  .brandmenu .menu > li.current-menu-item > a, .brandmenu .menu > li:hover > a {
+  .brandmenu .menu > li.ombro:hover > a {
+    color: #1BA6DF; }
+  .brandmenu .menu > li.interior:hover > a {
+    color: #F37021; }
+  .brandmenu .menu > li.special:hover > a {
+    color: #000; }
+  .brandmenu .menu > li.current-menu-item > a {
     color: #F37021; }
 
 /*==========================================================================
@@ -26966,9 +26972,10 @@ footer nav > div > ul li {
   .nav-mobile-menu .hoofdmenu > div > ul > li {
     display: block; }
     .nav-mobile-menu .hoofdmenu > div > ul > li:not(:last-of-type) {
-      margin-bottom: 15px; }
+      margin-bottom: 24px; }
     .nav-mobile-menu .hoofdmenu > div > ul > li > a {
-      color: #191B1D; }
+      color: #191B1D;
+      font-size: 18px; }
     .nav-mobile-menu .hoofdmenu > div > ul > li.current-menu-item > a, .nav-mobile-menu .hoofdmenu > div > ul > li:hover > a {
       color: #F37021; }
     .nav-mobile-menu .hoofdmenu > div > ul > li .sub-menu {
